@@ -15,11 +15,6 @@ const Hero = () => {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm text-foreground/80">Welcome to my portfolio</span>
-            </div>
-
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="gradient-text">Hello, I'm</span>
@@ -40,7 +35,7 @@ const Hero = () => {
 
             <div className="flex gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/chandrareddytiyyagura?tab=repositories"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-purple"
@@ -48,7 +43,7 @@ const Hero = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/chandrareddytiyyagura/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-cyan"
@@ -56,7 +51,7 @@ const Hero = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:email@example.com"
+                href="mailto:chandrareddy.tiyyagura@zohomail.in"
                 className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-pink"
               >
                 <Mail className="w-5 h-5" />
@@ -67,9 +62,16 @@ const Hero = () => {
               <Button
                 size="lg"
                 className="gradient-bg-primary hover:opacity-90 transition-opacity"
+                asChild
               >
-                <Download className="w-4 h-4 mr-2" />
-                Download Resume
+                <a 
+                  href="https://workdrive.zohoexternal.in/external/afb83c83d1eaecdf8f308fc217b973d32946e0abcebd62136faa7b297c307cae/download"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Resume
+                </a>
               </Button>
               <Button
                 size="lg"
