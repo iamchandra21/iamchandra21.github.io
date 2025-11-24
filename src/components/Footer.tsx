@@ -9,7 +9,7 @@ const Footer = () => {
           
           <div className="flex gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/chandrareddytiyyagura?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-purple"
@@ -17,7 +17,7 @@ const Footer = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/chandrareddytiyyagura/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-cyan"
@@ -25,7 +25,7 @@ const Footer = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="mailto:email@example.com"
+              href="mailto:chandrareddy.tiyyagura@zohomail.in"
               className="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-pink"
             >
               <Mail className="w-5 h-5" />
