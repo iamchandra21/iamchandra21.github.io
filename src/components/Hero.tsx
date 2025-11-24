@@ -65,7 +65,7 @@ const Hero = () => {
                 asChild
               >
                 <a 
-                  href="https://workdrive.zohoexternal.in/external/afb83c83d1eaecdf8f308fc217b973d32946e0abcebd62136faa7b297c307cae/download"
+                  href="https://workdrive.zoho.in/file/vp1i95479239c74d44378a74158c81372707b"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
