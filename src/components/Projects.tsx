@@ -90,14 +90,6 @@ const Projects = () => {
 
           {/* Project Details */}
           <div className="lg:col-span-3 space-y-6 animate-fade-in">
-            <div className="relative rounded-2xl overflow-hidden h-80">
-              <img
-                src={currentProject.image}
-                alt={currentProject.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-            </div>
 
             <div className="glass-card rounded-2xl p-8 space-y-6">
               <div className="flex justify-between items-start">
