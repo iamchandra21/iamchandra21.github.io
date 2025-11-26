@@ -9,7 +9,7 @@ const Footer = () => {
           
           <div className="flex gap-4">
             <a
-              href="https://github.com/chandrareddytiyyagura?tab=repositories"
+              href="https://github.com/chandra-reddy-tiyyagura?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-purple"
@@ -17,7 +17,7 @@ const Footer = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://www.linkedin.com/in/chandrareddytiyyagura/"
+              href="https://www.linkedin.com/in/chandra-reddy-tiyyagura/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-cyan"
