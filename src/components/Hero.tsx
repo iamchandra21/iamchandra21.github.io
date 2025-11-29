@@ -40,7 +40,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-purple"
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-5 h-5 text-focus-purple" />
               </a>
               <a
                 href="https://www.linkedin.com/in/chandra-reddy-tiyyagura/"
@@ -48,13 +48,13 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-cyan"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5 text-focus-cyan" />
               </a>
               <a
                 href="mailto:chandrareddy.tiyyagura@zohomail.in"
                 className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-pink"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5 text-focus-pink" />
               </a>
             </div>
 

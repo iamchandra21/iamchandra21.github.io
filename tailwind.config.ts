@@ -54,6 +54,11 @@ export default {
           blue: "hsl(var(--focus-blue))",
           cyan: "hsl(var(--focus-cyan))",
           green: "hsl(var(--focus-green))",
+          yellow: "hsl(var(--focus-yellow))",
+          teal: "hsl(var(--focus-teal))",
+          indigo: "hsl(var(--focus-indigo))",
+          lime: "hsl(var(--focus-lime))",
+          rose: "hsl(var(--focus-rose))",
         },
       },
       borderRadius: {

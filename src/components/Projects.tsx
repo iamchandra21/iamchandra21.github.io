@@ -45,7 +45,7 @@ const Projects = () => {
   const currentProject = projects[selectedProject];
 
   return (
-    <section id="projects" className="py-20 md:py-32">
+    <section id="projects" className="py-20 md:py-32 bg-muted/20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text">Featured Projects</h2>
@@ -62,9 +62,9 @@ const Projects = () => {
               <div
                 key={project.id}
                 onClick={() => setSelectedProject(index)}
-                className={`glass-card rounded-xl p-4 cursor-pointer transition-all duration-300 hover:scale-105 ${
+                className={`glass-card rounded-xl p-6 cursor-pointer transition-all duration-300 hover:scale-105 ${
                   selectedProject === index
-                    ? "border-primary border-2 bg-primary/10"
+                    ? "border-focus-orange border-2 bg-focus-orange/10"
                     : "border-border/50"
                 }`}
               >
@@ -75,12 +75,14 @@ const Projects = () => {
                     className="w-20 h-20 rounded-lg object-cover"
                   />
                   <div className="flex-1">
-                    <h3 className="font-semibold text-lg mb-1">{project.title}</h3>
-                    <p className="text-sm text-foreground/60 line-clamp-2">{project.description}</p>
+                    <h3 className={`font-semibold text-lg mb-1 ${selectedProject === index ? "text-focus-orange" : ""}`}>{project.title}</h3>
+                    {selectedProject === index && (
+                      <p className="text-sm text-foreground/60 line-clamp-2">{project.description}</p>
+                    )}
                   </div>
                   <ChevronRight
                     className={`w-5 h-5 transition-transform ${
-                      selectedProject === index ? "text-primary" : "text-foreground/30"
+                      selectedProject === index ? "text-focus-orange" : "text-foreground/30"
                     }`}
                   />
                 </div>
@@ -97,7 +99,7 @@ const Projects = () => {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="border-primary/50"
+                  className="border-focus-orange/50 hover:bg-focus-orange/10"
                   onClick={() => window.open(currentProject.github, "_blank")}
                 >
                   <Github className="w-4 h-4 mr-2" />
@@ -109,12 +111,12 @@ const Projects = () => {
               <p className="text-foreground/60 leading-relaxed text-sm">{currentProject.fullDescription}</p>
 
               <div>
-                <h4 className="text-sm font-semibold text-primary mb-3">TECHNOLOGIES USED</h4>
+                <h4 className="text-sm font-semibold text-focus-orange mb-3">TECHNOLOGIES USED</h4>
                 <div className="flex flex-wrap gap-2">
                   {currentProject.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1.5 rounded-lg bg-primary/20 text-sm border border-primary/30"
+                      className="px-3 py-1.5 rounded-lg bg-focus-orange/20 text-sm border border-focus-orange/30"
                     >
                       {tech}
                     </span>
@@ -123,11 +125,11 @@ const Projects = () => {
               </div>
 
               <div>
-                <h4 className="text-sm font-semibold text-accent mb-3">KEY FEATURES</h4>
+                <h4 className="text-sm font-semibold text-focus-cyan mb-3">KEY FEATURES</h4>
                 <div className="space-y-2">
                   {currentProject.features.map((feature) => (
                     <div key={feature} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-focus-cyan flex-shrink-0" />
                       <span className="text-foreground/70">{feature}</span>
                     </div>
                   ))}
@@ -135,13 +137,13 @@ const Projects = () => {
               </div>
 
               <div>
-                <h4 className="text-sm font-semibold text-secondary mb-3">PROJECT IMPACT</h4>
+                <h4 className="text-sm font-semibold text-focus-lime mb-3">PROJECT IMPACT</h4>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="glass-card rounded-xl p-4 border-l-4 border-accent">
+                  <div className="glass-card rounded-xl p-4 border-l-4 border-focus-cyan">
                     <div className="text-sm text-foreground/60 mb-1">Duration</div>
                     <div className="text-lg font-semibold">{currentProject.impact.duration}</div>
                   </div>
-                  <div className="glass-card rounded-xl p-4 border-l-4 border-secondary">
+                  <div className="glass-card rounded-xl p-4 border-l-4 border-focus-lime">
                     <div className="text-sm text-foreground/60 mb-1">Result</div>
                     <div className="text-lg font-semibold">{currentProject.impact.result}</div>
                   </div>

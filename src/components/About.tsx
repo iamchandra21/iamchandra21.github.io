@@ -51,8 +51,18 @@ const About = () => {
                     className="glass-card rounded-2xl p-6 flex gap-4 animate-fade-in hover:scale-105 transition-transform duration-300"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className={`w-14 h-14 rounded-xl bg-focus-${area.color}/20 flex items-center justify-center flex-shrink-0`}>
-                      <Icon className={`w-7 h-7 text-focus-${area.color}`} />
+                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                    area.color === 'purple' ? 'bg-focus-purple/20' : 
+                    area.color === 'pink' ? 'bg-focus-pink/20' : 
+                    area.color === 'orange' ? 'bg-focus-orange/20' : 
+                    'bg-focus-blue/20'
+                  }`}>
+                      <Icon className={`w-7 h-7 ${
+                        area.color === 'purple' ? 'text-focus-purple' : 
+                        area.color === 'pink' ? 'text-focus-pink' : 
+                        area.color === 'orange' ? 'text-focus-orange' : 
+                        'text-focus-blue'
+                      }`} />
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold mb-2">{area.title}</h4>

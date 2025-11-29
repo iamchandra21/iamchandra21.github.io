@@ -46,9 +46,9 @@ const Education = () => {
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="glass-card rounded-2xl p-8 space-y-6 animate-fade-in">
             <div className="flex items-start gap-6">
-              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-secondary to-cyan-500 flex items-center justify-center flex-shrink-0 relative">
+              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-focus-teal to-focus-cyan flex items-center justify-center flex-shrink-0 relative">
                 <GraduationCap className="w-10 h-10 text-white" />
-                <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-focus-yellow flex items-center justify-center">
                   <Star className="w-4 h-4 text-white" />
                 </div>
               </div>
@@ -65,9 +65,9 @@ const Education = () => {
                     <Calendar className="w-4 h-4" />
                     <span>Jun 2018 - May 2022</span>
                   </div>
-                  <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 border border-accent/30">
-                    <Star className="w-4 h-4 text-accent" />
-                    <span className="font-semibold text-accent">CGPA: 8.95</span>
+                  <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-focus-yellow/20 border border-focus-yellow/30">
+                    <Star className="w-4 h-4 text-focus-yellow" />
+                    <span className="font-semibold text-focus-yellow">CGPA: 8.95</span>
                   </div>
                 </div>
                 <p className="text-foreground/70 leading-relaxed">
@@ -86,8 +86,8 @@ const Education = () => {
                     className="glass-card rounded-xl p-6 space-y-3 animate-fade-in hover:scale-105 transition-transform duration-300"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-secondary" />
+                    <div className="w-12 h-12 rounded-lg bg-focus-lime/20 flex items-center justify-center">
+                      <Icon className="w-6 h-6 text-focus-lime" />
                     </div>
                     <h4 className="font-semibold text-lg">{highlight.title}</h4>
                     <p className="text-sm text-foreground/60">{highlight.description}</p>
@@ -99,14 +99,14 @@ const Education = () => {
 
           <div className="glass-card rounded-xl p-8">
             <div className="flex items-center gap-3 mb-6">
-              <Code className="w-6 h-6 text-primary" />
+              <Code className="w-6 h-6 text-focus-teal" />
               <h4 className="text-2xl font-bold">Key Focus Areas</h4>
             </div>
             <div className="flex flex-wrap gap-3">
               {focusAreas.map((area) => (
                 <span
                   key={area}
-                  className="px-4 py-2 rounded-lg bg-secondary/20 border border-secondary/30 text-sm hover:bg-secondary/30 transition-colors"
+                  className="px-4 py-2 rounded-lg bg-focus-teal/20 border border-focus-teal/30 text-sm hover:bg-focus-teal/30 transition-colors"
                 >
                   {area}
                 </span>
