@@ -28,7 +28,7 @@ const Header = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <h1 className="text-xl font-bold gradient-text">Tiyyagura Chandra Reddy</h1>
         <nav className="hidden md:flex gap-8">
-          {["Home", "About", "Skills", "Projects", "Experience"].map((item) => (
+          {["Home", "About", "Skills", "Projects", "Experience", "Education"].map((item) => (
             <Button
               key={item}
               variant="ghost"
