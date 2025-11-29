@@ -155,7 +155,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div key={project.id} className="w-full">
               <div
-                onClick={() => setSelectedProject(selectedProject === index ? -1 : index)}
+                onClick={() => setSelectedProject(index)}
                 className={`glass-card rounded-xl p-4 md:p-6 cursor-pointer transition-all duration-300 ${
                   selectedProject === index
                     ? "border-focus-orange border-2 bg-focus-orange/10"
