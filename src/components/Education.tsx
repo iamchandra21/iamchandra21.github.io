@@ -1,4 +1,4 @@
-import { GraduationCap, Code, Database, Award, Calendar, Star } from "lucide-react";
+import { BookOpen, Code, Database, Award, Calendar, Star } from "lucide-react";
 
 const Education = () => {
   const highlights = [
@@ -47,7 +47,7 @@ const Education = () => {
           <div className="glass-card rounded-2xl p-8 space-y-6 animate-fade-in">
             <div className="flex items-start gap-6">
               <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-focus-teal to-focus-cyan flex items-center justify-center flex-shrink-0 relative">
-                <GraduationCap className="w-10 h-10 text-white" />
+                <BookOpen className="w-10 h-10 text-white" />
                 <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-focus-yellow flex items-center justify-center">
                   <Star className="w-4 h-4 text-white" />
                 </div>
@@ -58,7 +58,7 @@ const Education = () => {
                 </h3>
                 <div className="flex flex-wrap gap-4 text-foreground/60 mb-4">
                   <div className="flex items-center gap-2">
-                    <GraduationCap className="w-4 h-4" />
+                    <BookOpen className="w-4 h-4" />
                     <span className="font-semibold">LBRCE</span>
                   </div>
                   <div className="flex items-center gap-2">
