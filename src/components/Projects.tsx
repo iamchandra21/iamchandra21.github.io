@@ -55,7 +55,8 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-6">
+        {/* Desktop Layout - Side by Side */}
+        <div className="hidden lg:grid lg:grid-cols-5 gap-6">
           {/* Project List */}
           <div className="lg:col-span-2 space-y-4">
             {projects.map((project, index) => (
@@ -76,9 +77,6 @@ const Projects = () => {
                   />
                   <div className="flex-1">
                     <h3 className={`font-semibold text-lg mb-1 ${selectedProject === index ? "text-focus-orange" : ""}`}>{project.title}</h3>
-                    {selectedProject === index && (
-                      <p className="text-sm text-foreground/60 line-clamp-2">{project.description}</p>
-                    )}
                   </div>
                   <ChevronRight
                     className={`w-5 h-5 transition-transform ${
@@ -92,7 +90,6 @@ const Projects = () => {
 
           {/* Project Details */}
           <div className="lg:col-span-3 space-y-6 animate-fade-in">
-
             <div className="glass-card rounded-2xl p-8 space-y-6">
               <div className="flex justify-between items-start">
                 <h3 className="text-3xl font-bold">{currentProject.title}</h3>
@@ -151,6 +148,100 @@ const Projects = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Mobile/Tablet Layout - Accordion Style */}
+        <div className="lg:hidden space-y-4">
+          {projects.map((project, index) => (
+            <div key={project.id}>
+              <div
+                onClick={() => setSelectedProject(selectedProject === index ? -1 : index)}
+                className={`glass-card rounded-xl p-6 cursor-pointer transition-all duration-300 ${
+                  selectedProject === index
+                    ? "border-focus-orange border-2 bg-focus-orange/10"
+                    : "border-border/50"
+                }`}
+              >
+                <div className="flex gap-4 items-center">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-16 h-16 rounded-lg object-cover"
+                  />
+                  <div className="flex-1">
+                    <h3 className={`font-semibold text-lg ${selectedProject === index ? "text-focus-orange" : ""}`}>
+                      {project.title}
+                    </h3>
+                  </div>
+                  <ChevronRight
+                    className={`w-5 h-5 transition-transform ${
+                      selectedProject === index ? "text-focus-orange rotate-90" : "text-foreground/30"
+                    }`}
+                  />
+                </div>
+              </div>
+
+              {selectedProject === index && (
+                <div className="mt-4 glass-card rounded-2xl p-6 space-y-6 animate-fade-in">
+                  <div className="flex justify-between items-start flex-wrap gap-4">
+                    <h3 className="text-2xl font-bold">{project.title}</h3>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-focus-orange/50 hover:bg-focus-orange/10"
+                      onClick={() => window.open(project.github, "_blank")}
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      View on GitHub
+                    </Button>
+                  </div>
+
+                  <p className="text-foreground/70 leading-relaxed">{project.description}</p>
+                  <p className="text-foreground/60 leading-relaxed text-sm">{project.fullDescription}</p>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-focus-orange mb-3">TECHNOLOGIES USED</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1.5 rounded-lg bg-focus-orange/20 text-sm border border-focus-orange/30"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-focus-cyan mb-3">KEY FEATURES</h4>
+                    <div className="space-y-2">
+                      {project.features.map((feature) => (
+                        <div key={feature} className="flex items-center gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-focus-cyan flex-shrink-0" />
+                          <span className="text-foreground/70">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-focus-lime mb-3">PROJECT IMPACT</h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="glass-card rounded-xl p-4 border-l-4 border-focus-cyan">
+                        <div className="text-sm text-foreground/60 mb-1">Duration</div>
+                        <div className="text-lg font-semibold">{project.impact.duration}</div>
+                      </div>
+                      <div className="glass-card rounded-xl p-4 border-l-4 border-focus-lime">
+                        <div className="text-sm text-foreground/60 mb-1">Result</div>
+                        <div className="text-lg font-semibold">{project.impact.result}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

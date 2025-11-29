@@ -46,11 +46,8 @@ const Education = () => {
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="glass-card rounded-2xl p-8 space-y-6 animate-fade-in">
             <div className="flex items-start gap-6">
-              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-focus-teal to-focus-cyan flex items-center justify-center flex-shrink-0 relative">
+              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-focus-teal to-focus-cyan flex items-center justify-center flex-shrink-0">
                 <BookOpen className="w-10 h-10 text-white" />
-                <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-focus-yellow flex items-center justify-center">
-                  <Star className="w-4 h-4 text-white" />
-                </div>
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl md:text-3xl font-bold gradient-text mb-2">
