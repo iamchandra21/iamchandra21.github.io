@@ -63,15 +63,35 @@ const Skills = () => {
             return (
               <div
                 key={category.title}
-                className="glass-card rounded-2xl p-6 space-y-4 animate-fade-in hover:scale-105 transition-transform duration-300 border-l-4"
+                className={`glass-card rounded-2xl p-6 space-y-4 animate-fade-in hover:scale-105 transition-transform duration-300 border-l-4 ${
+                  category.color === 'purple' ? 'border-focus-purple' :
+                  category.color === 'cyan' ? 'border-focus-cyan' :
+                  category.color === 'pink' ? 'border-focus-pink' :
+                  category.color === 'orange' ? 'border-focus-orange' :
+                  category.color === 'green' ? 'border-focus-green' :
+                  'border-focus-blue'
+                }`}
                 style={{
                   animationDelay: `${index * 0.1}s`,
-                  borderLeftColor: `hsl(var(--focus-${category.color}))`,
                 }}
               >
                 <div className="flex items-center gap-3">
-                  <div className={`w-12 h-12 rounded-lg bg-focus-${category.color}/20 flex items-center justify-center`}>
-                    <Icon className={`w-6 h-6 text-focus-${category.color}`} />
+                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
+                    category.color === 'purple' ? 'bg-focus-purple/20' :
+                    category.color === 'cyan' ? 'bg-focus-cyan/20' :
+                    category.color === 'pink' ? 'bg-focus-pink/20' :
+                    category.color === 'orange' ? 'bg-focus-orange/20' :
+                    category.color === 'green' ? 'bg-focus-green/20' :
+                    'bg-focus-blue/20'
+                  }`}>
+                    <Icon className={`w-6 h-6 ${
+                      category.color === 'purple' ? 'text-focus-purple' :
+                      category.color === 'cyan' ? 'text-focus-cyan' :
+                      category.color === 'pink' ? 'text-focus-pink' :
+                      category.color === 'orange' ? 'text-focus-orange' :
+                      category.color === 'green' ? 'text-focus-green' :
+                      'text-focus-blue'
+                    }`} />
                   </div>
                   <h3 className="text-xl font-semibold">{category.title}</h3>
                 </div>

@@ -51,6 +51,11 @@ All colors MUST be HSL.
     --focus-blue: 210 90% 60%;
     --focus-cyan: 180 85% 55%;
     --focus-green: 150 70% 50%;
+    --focus-yellow: 45 95% 60%;
+    --focus-teal: 170 80% 50%;
+    --focus-indigo: 240 75% 65%;
+    --focus-lime: 80 75% 55%;
+    --focus-rose: 340 80% 60%;
 
     /* Glow effects */
     --glow-purple: 270 70% 65% / 0.3;
