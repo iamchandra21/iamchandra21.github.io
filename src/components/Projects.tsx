@@ -150,16 +150,18 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Mobile/Tablet Layout - Accordion Style */}
-        <div className="lg:hidden space-y-4">
-          {projects.map((project, index) => (
-            <div key={project.id} className="w-full">
+        {/* Mobile/Tablet Layout - Titles then Details Below */}
+        <div className="lg:hidden space-y-6">
+          {/* Project Titles Section */}
+          <div className="space-y-4">
+            {projects.map((project, index) => (
               <div
+                key={project.id}
                 onClick={() => setSelectedProject(index)}
                 className={`glass-card rounded-xl p-4 md:p-6 cursor-pointer transition-all duration-300 ${
                   selectedProject === index
                     ? "border-focus-orange border-2 bg-focus-orange/10"
-                    : "border-border/50"
+                    : "border-border/50 hover:border-border"
                 }`}
               >
                 <div className="flex gap-3 md:gap-4 items-center">
@@ -180,71 +182,72 @@ const Projects = () => {
                   />
                 </div>
               </div>
+            ))}
+          </div>
 
-              {selectedProject === index && (
-                <div className="mt-4 glass-card rounded-2xl p-4 md:p-6 space-y-4 md:space-y-6 animate-fade-in overflow-hidden">
-                  <div className="flex justify-between items-start flex-wrap gap-3">
-                    <h3 className="text-xl md:text-2xl font-bold">{project.title}</h3>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-focus-orange/50 hover:bg-focus-orange/10 text-xs md:text-sm"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        window.open(project.github, "_blank");
-                      }}
+          {/* Project Details Section - Below All Titles */}
+          {selectedProject !== -1 && (
+            <div className="glass-card rounded-2xl p-4 md:p-6 space-y-4 md:space-y-6 animate-fade-in overflow-hidden">
+              <div className="flex justify-between items-start flex-wrap gap-3">
+                <h3 className="text-xl md:text-2xl font-bold">{currentProject.title}</h3>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-focus-orange/50 hover:bg-focus-orange/10 text-xs md:text-sm"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(currentProject.github, "_blank");
+                  }}
+                >
+                  <Github className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
+                  GitHub
+                </Button>
+              </div>
+
+              <p className="text-sm md:text-base text-foreground/70 leading-relaxed">{currentProject.description}</p>
+              <p className="text-xs md:text-sm text-foreground/60 leading-relaxed">{currentProject.fullDescription}</p>
+
+              <div>
+                <h4 className="text-xs md:text-sm font-semibold text-focus-orange mb-2 md:mb-3">TECHNOLOGIES USED</h4>
+                <div className="flex flex-wrap gap-2">
+                  {currentProject.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 md:px-3 py-1 md:py-1.5 rounded-lg bg-focus-orange/20 text-xs md:text-sm border border-focus-orange/30"
                     >
-                      <Github className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
-                      GitHub
-                    </Button>
-                  </div>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
 
-                  <p className="text-sm md:text-base text-foreground/70 leading-relaxed">{project.description}</p>
-                  <p className="text-xs md:text-sm text-foreground/60 leading-relaxed">{project.fullDescription}</p>
-
-                  <div>
-                    <h4 className="text-xs md:text-sm font-semibold text-focus-orange mb-2 md:mb-3">TECHNOLOGIES USED</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 md:px-3 py-1 md:py-1.5 rounded-lg bg-focus-orange/20 text-xs md:text-sm border border-focus-orange/30"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+              <div>
+                <h4 className="text-xs md:text-sm font-semibold text-focus-cyan mb-2 md:mb-3">KEY FEATURES</h4>
+                <div className="space-y-2">
+                  {currentProject.features.map((feature) => (
+                    <div key={feature} className="flex items-center gap-2">
+                      <CheckCircle2 className="w-3 h-3 md:w-4 md:h-4 text-focus-cyan flex-shrink-0" />
+                      <span className="text-xs md:text-sm text-foreground/70">{feature}</span>
                     </div>
-                  </div>
+                  ))}
+                </div>
+              </div>
 
-                  <div>
-                    <h4 className="text-xs md:text-sm font-semibold text-focus-cyan mb-2 md:mb-3">KEY FEATURES</h4>
-                    <div className="space-y-2">
-                      {project.features.map((feature) => (
-                        <div key={feature} className="flex items-center gap-2">
-                          <CheckCircle2 className="w-3 h-3 md:w-4 md:h-4 text-focus-cyan flex-shrink-0" />
-                          <span className="text-xs md:text-sm text-foreground/70">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
+              <div>
+                <h4 className="text-xs md:text-sm font-semibold text-focus-lime mb-2 md:mb-3">PROJECT IMPACT</h4>
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
+                  <div className="glass-card rounded-xl p-3 md:p-4 border-l-4 border-focus-cyan">
+                    <div className="text-xs md:text-sm text-foreground/60 mb-1">Duration</div>
+                    <div className="text-sm md:text-lg font-semibold">{currentProject.impact.duration}</div>
                   </div>
-
-                  <div>
-                    <h4 className="text-xs md:text-sm font-semibold text-focus-lime mb-2 md:mb-3">PROJECT IMPACT</h4>
-                    <div className="grid grid-cols-2 gap-3 md:gap-4">
-                      <div className="glass-card rounded-xl p-3 md:p-4 border-l-4 border-focus-cyan">
-                        <div className="text-xs md:text-sm text-foreground/60 mb-1">Duration</div>
-                        <div className="text-sm md:text-lg font-semibold">{project.impact.duration}</div>
-                      </div>
-                      <div className="glass-card rounded-xl p-3 md:p-4 border-l-4 border-focus-lime">
-                        <div className="text-xs md:text-sm text-foreground/60 mb-1">Result</div>
-                        <div className="text-sm md:text-lg font-semibold">{project.impact.result}</div>
-                      </div>
-                    </div>
+                  <div className="glass-card rounded-xl p-3 md:p-4 border-l-4 border-focus-lime">
+                    <div className="text-xs md:text-sm text-foreground/60 mb-1">Result</div>
+                    <div className="text-sm md:text-lg font-semibold">{currentProject.impact.result}</div>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
-          ))}
+          )}
         </div>
       </div>
     </section>
