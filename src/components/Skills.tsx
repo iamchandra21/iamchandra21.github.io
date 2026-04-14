@@ -63,7 +63,7 @@ const Skills = () => {
             return (
               <div
                 key={category.title}
-                className={`glass-card rounded-2xl p-6 space-y-4 animate-fade-in hover:scale-105 transition-transform duration-300 border-l-4 ${
+                className={`glass-card rounded-2xl p-6 space-y-4 border-l-4 hover-shadow-${category.color} ${
                   category.color === 'purple' ? 'border-focus-purple' :
                   category.color === 'cyan' ? 'border-focus-cyan' :
                   category.color === 'pink' ? 'border-focus-pink' :
@@ -71,9 +71,6 @@ const Skills = () => {
                   category.color === 'green' ? 'border-focus-green' :
                   'border-focus-blue'
                 }`}
-                style={{
-                  animationDelay: `${index * 0.1}s`,
-                }}
               >
                 <div className="flex items-center gap-3">
                   <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${

@@ -55,7 +55,7 @@ const Experience = () => {
 
         <div className="max-w-5xl mx-auto space-y-8">
           {/* Job Header */}
-          <div className="glass-card rounded-2xl p-8 space-y-6 animate-fade-in">
+          <div className="glass-card rounded-2xl p-8 space-y-6">
             <div className="flex items-start gap-4">
               <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-focus-indigo to-focus-purple flex items-center justify-center flex-shrink-0">
                 <Briefcase className="w-8 h-8 text-white" />
@@ -116,11 +116,16 @@ const Experience = () => {
               <h3 className="text-2xl font-bold">Key Achievements</h3>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              {achievements.map((achievement, index) => (
+              {achievements.map((achievement, index) => {
+                let shadowColor = "purple";
+                if (achievement.title.includes("Targeting")) shadowColor = "pink";
+                if (achievement.title.includes("A/B")) shadowColor = "green";
+                if (achievement.title.includes("Engineering")) shadowColor = "cyan";
+                
+                return (
                 <div
                   key={achievement.title}
-                  className="glass-card rounded-xl p-6 space-y-4 animate-fade-in hover:scale-[1.02] transition-transform duration-300"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className={`glass-card rounded-xl p-6 space-y-4 hover-shadow-${shadowColor}`}
                 >
                   <div className="flex items-center gap-3">
                     {achievement.icon}
@@ -141,7 +146,8 @@ const Experience = () => {
                     ))}
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 

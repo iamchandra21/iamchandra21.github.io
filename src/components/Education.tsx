@@ -44,7 +44,7 @@ const Education = () => {
         </div>
 
         <div className="max-w-5xl mx-auto space-y-8">
-          <div className="glass-card rounded-2xl p-8 space-y-6 animate-fade-in">
+          <div className="glass-card rounded-2xl p-8 space-y-6">
             <div className="flex items-start gap-6">
               <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-focus-teal to-focus-cyan flex items-center justify-center flex-shrink-0">
                 <BookOpen className="w-10 h-10 text-white" />
@@ -80,8 +80,7 @@ const Education = () => {
                 return (
                   <div
                     key={highlight.title}
-                    className="glass-card rounded-xl p-6 space-y-3 animate-fade-in hover:scale-105 transition-transform duration-300"
-                    style={{ animationDelay: `${index * 0.1}s` }}
+                    className="glass-card rounded-xl p-6 space-y-3 hover-shadow-primary"
                   >
                     <div className="w-12 h-12 rounded-lg bg-focus-lime/20 flex items-center justify-center">
                       <Icon className="w-6 h-6 text-focus-lime" />

@@ -63,10 +63,10 @@ const Projects = () => {
               <div
                 key={project.id}
                 onClick={() => setSelectedProject(index)}
-                className={`glass-card rounded-xl p-6 cursor-pointer transition-all duration-300 hover:scale-105 ${
+                className={`glass-card rounded-xl p-6 cursor-pointer transition-all duration-300 hover-shadow-orange ${
                   selectedProject === index
                     ? "border-focus-orange border-2 bg-focus-orange/10"
-                    : "border-border/50"
+                    : "border-border"
                 }`}
               >
                 <div className="flex gap-4 items-center">
@@ -89,7 +89,7 @@ const Projects = () => {
           </div>
 
           {/* Project Details */}
-          <div className="lg:col-span-3 space-y-6 animate-fade-in">
+          <div className="lg:col-span-3 space-y-6">
             <div className="glass-card rounded-2xl p-8 space-y-6">
               <div className="flex justify-between items-start">
                 <h3 className="text-3xl font-bold">{currentProject.title}</h3>
@@ -158,10 +158,10 @@ const Projects = () => {
               <div
                 key={project.id}
                 onClick={() => setSelectedProject(index)}
-                className={`glass-card rounded-xl p-4 md:p-6 cursor-pointer transition-all duration-300 ${
+                className={`glass-card rounded-xl p-4 md:p-6 cursor-pointer hover-shadow-orange ${
                   selectedProject === index
                     ? "border-focus-orange border-2 bg-focus-orange/10"
-                    : "border-border/50 hover:border-border"
+                    : "border-border hover:border-border"
                 }`}
               >
                 <div className="flex gap-3 md:gap-4 items-center">
@@ -187,7 +187,7 @@ const Projects = () => {
 
           {/* Project Details Section - Below All Titles */}
           {selectedProject !== -1 && (
-            <div className="glass-card rounded-2xl p-4 md:p-6 space-y-4 md:space-y-6 animate-fade-in overflow-hidden">
+            <div className="glass-card rounded-2xl p-4 md:p-6 space-y-4 md:space-y-6 overflow-hidden">
               <div className="flex justify-between items-start flex-wrap gap-3">
                 <h3 className="text-xl md:text-2xl font-bold">{currentProject.title}</h3>
                 <Button
