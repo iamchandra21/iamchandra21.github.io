@@ -89,13 +89,13 @@ const Hero = () => {
             </div>
 
             <div className="flex gap-4 justify-center lg:justify-start pt-2">
-              <a href="https://github.com/chandrareddytiyyagura" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="https://github.com/iamchandra21" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="https://www.linkedin.com/in/chandrareddytiyyagura/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="https://www.linkedin.com/in/iamchandra21/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="mailto:chandrareddy.tiyyagura@zohomail.in" className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="mailto:chandra.tiyyagura@gmail.com" className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
             </div>

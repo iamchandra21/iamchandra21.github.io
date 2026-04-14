@@ -11,7 +11,7 @@ const Footer = () => {
           
           <div className="flex gap-4 order-1 md:order-2">
             <a
-              href="https://github.com/chandrareddytiyyagura?tab=repositories"
+              href="https://github.com/iamchandra21"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-purple"
@@ -19,7 +19,7 @@ const Footer = () => {
               <Github className="w-6 h-6 text-focus-purple" />
             </a>
             <a
-              href="https://www.linkedin.com/in/chandrareddytiyyagura/"
+              href="https://www.linkedin.com/in/iamchandra21/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-cyan"
@@ -27,7 +27,7 @@ const Footer = () => {
               <Linkedin className="w-6 h-6 text-focus-cyan" />
             </a>
             <a
-              href="mailto:chandrareddy.tiyyagura@zohomail.in"
+              href="mailto:chandra.tiyyagura@gmail.com"
               className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:scale-110 transition-transform duration-300 hover:glow-effect-pink"
             >
               <Mail className="w-6 h-6 text-focus-pink" />

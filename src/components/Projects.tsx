@@ -22,7 +22,7 @@ const Projects = () => {
         duration: "3 months",
         result: "25% faster diagnosis",
       },
-      github: "https://github.com",
+      github: "https://github.com/iamchandra21/APS-failure-classification",
     },
     {
       id: 1,
@@ -38,7 +38,7 @@ const Projects = () => {
         duration: "4 months",
         result: "Automated complaint triage",
       },
-      github: "https://github.com",
+      github: "https://github.com/iamchandra21/financial-product-complaint",
     },
   ];
 
