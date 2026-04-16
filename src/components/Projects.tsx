@@ -1,4 +1,5 @@
-import { Github, CheckCircle2, Calendar, Target } from "lucide-react";
+import { Github, CheckCircle2, Calendar, Target, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import truckImage from "@/assets/truck-project.png";
 import financeImage from "@/assets/finance-project.jpg";
@@ -19,6 +20,7 @@ const Projects = () => {
         duration: "3 months",
         result: "25% faster diagnosis",
       },
+      caseStudy: "/project/aps-failure",
       github: "https://github.com/iamchandra21/APS-failure-classification",
     },
     {
@@ -135,13 +137,37 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <Button
-                  className="w-full mt-4 h-12 rounded-xl bg-secondary text-secondary-foreground hover:bg-focus-orange hover:text-white transition-all shadow-sm border border-border/50"
-                  onClick={() => window.open(project.github, "_blank")}
-                >
-                  <Github className="w-5 h-5 mr-3" />
-                  View Repository
-                </Button>
+                <div className="flex gap-3 mt-4">
+                  {project.caseStudy ? (
+                    <>
+                      <Button
+                        className="flex-1 h-12 rounded-xl gradient-bg-primary text-primary-foreground hover:opacity-90 transition-all shadow-sm border-0"
+                        asChild
+                      >
+                        <Link to={project.caseStudy}>
+                          <BookOpen className="w-5 h-5 mr-2" />
+                          Read Case Study
+                        </Link>
+                      </Button>
+                      <Button
+                        variant="outline"
+                        className="h-12 w-12 rounded-xl border-border/50 hover:bg-focus-orange/90 hover:text-white hover:border-focus-orange transition-all p-0 flex items-center justify-center flex-shrink-0"
+                        onClick={() => window.open(project.github, "_blank")}
+                        title="View GitHub"
+                      >
+                        <Github className="w-5 h-5" />
+                      </Button>
+                    </>
+                  ) : (
+                    <Button
+                      className="w-full h-12 rounded-xl bg-secondary text-secondary-foreground hover:bg-focus-orange hover:text-white transition-all shadow-sm border border-border/50"
+                      onClick={() => window.open(project.github, "_blank")}
+                    >
+                      <Github className="w-5 h-5 mr-3" />
+                      View Repository
+                    </Button>
+                  )}
+                </div>
               </div>
             </div>
           ))}
