@@ -71,10 +71,6 @@ const Experience = () => {
                     <Calendar className="w-4 h-4" />
                     <span>Nov 2022 - Present</span>
                   </div>
-                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-focus-rose/20 border border-focus-rose/30">
-                    <Users className="w-4 h-4 text-focus-rose" />
-                    <span className="font-semibold text-focus-rose">Client: Adobe</span>
-                  </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="w-4 h-4" />
                     <span>Bengaluru</span>

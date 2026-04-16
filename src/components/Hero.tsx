@@ -33,7 +33,7 @@ const Hero = () => {
                 <Building className="w-5 h-5 text-primary" />
                 <div>
                   <p className="text-sm font-semibold">Current Role</p>
-                  <p className="text-sm text-foreground/70">SE at HCLTech (Client: Adobe)</p>
+                  <p className="text-sm text-foreground/70">SE at HCLTech</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
