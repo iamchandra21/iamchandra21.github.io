@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, CheckCircle2, ChevronRight } from "lucide-react";
-import truckImage from "@/assets/truck-project.jpg";
+import truckImage from "@/assets/truck-project.png";
 import financeImage from "@/assets/finance-project.jpg";
 
 const Projects = () => {
